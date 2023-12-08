@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SumaAppMvvm.MainPage">
+
+    <StackLayout Padding="20" BackgroundColor="Black">
+        <!-- Campos de entrada -->
+        <Entry Placeholder="Valor 1" Keyboard="Numeric" Text="{Binding Value1}" Margin="0,0,0,10" />
+        <Entry Placeholder="Valor 2" Keyboard="Numeric" Text="{Binding Value2}" Margin="0,0,0,10" />
+
+        <!-- Botón para ejecutar la operación -->
+        <Button Text="Sumar" Command="{Binding SumCommand}" Margin="0,0,0,10" BackgroundColor="Green" TextColor="Black"/>
+
+        <!-- Campo para mostrar el resultado -->
+        <Label Text="{Binding Result}" FontSize="20" FontAttributes="Bold" TextColor="Green" Margin="0,0,0,10" />
+
+        <!-- Botón para limpiar los campos -->
+        <Button Text="Limpiar" Command="{Binding ClearCommand}" BackgroundColor="Red" TextColor="Black" />
+    </StackLayout>
+</ContentPage>
